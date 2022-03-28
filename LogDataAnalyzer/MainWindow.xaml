@@ -1,0 +1,26 @@
+﻿<Window x:Class="LogDataAnalyzer.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:LogDataAnalyzer"
+        mc:Ignorable="d"
+        Title="LogDataAnalyzer" Height="250" Width="350">
+    <Grid>
+        <Label Content="Данни: брой редактирани Wiki от всеки потребител" HorizontalAlignment="Left" Margin="25,15,0,0" VerticalAlignment="Top"/>
+        
+        <TextBox x:Name="inputFileTextBox" HorizontalAlignment="Left" Height="23" Margin="25,50,0,0" VerticalAlignment="Top" Width="175"/>
+        <Button Content="Избор файл" Click="ReadInputFile_Click" HorizontalAlignment="Left" Margin="225,50,0,0" VerticalAlignment="Top" Width="100"/>
+
+        <GroupBox Header="Анализ" HorizontalAlignment="Left" Height="90" Margin="25,75,0,0" VerticalAlignment="Top" Width="285">
+            <WrapPanel x:Name="choicesBox">
+                <RadioButton x:Name="absoluteCheckBox" Content="Абсолютна честота" HorizontalAlignment="Left" Height="20" Margin="10,10,0,0" VerticalAlignment="Top"/>
+                <RadioButton x:Name="medianCheckBox" Content="Медиана" HorizontalAlignment="Left" Height="20" Margin="20,10,0,0" VerticalAlignment="Top"/>
+                <RadioButton x:Name="relativeCheckBox" Content="Относителна честота" HorizontalAlignment="Left" Height="20" Margin="10,10,0,0" VerticalAlignment="Top"/>
+                <RadioButton x:Name="dispersionCheckBox" Content="Дисперсия" HorizontalAlignment="Left" Height="20" Margin="10,10,0,0" VerticalAlignment="Top"/>
+            </WrapPanel>
+        </GroupBox>
+
+        <Button Content="Стартиране" Click="StartAlgorithm_Click" HorizontalAlignment="Left" Margin="125,175,0,0" VerticalAlignment="Top" Width="100"/>
+    </Grid>
+</Window>
